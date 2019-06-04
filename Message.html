@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Page</title>
+    <link href="Css/font-awesome.css" rel="stylesheet" />
+    <link href="Css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Css/bootstrap.css" rel="stylesheet">
+    <link href="Css/defult-index.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+<style type="text/css">
+    header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        margin: 6.5em 0;
+        position: relative;
+    }
+
+    header>.header_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(15px);
+        /* background-color: #eee; */
+    }
+
+    header .Icon-box {
+        padding: 2.5em 0 0em 0;
+    }
+
+    header .Icon-box .img_back {
+        border-radius: 50%;
+        width: 8em;
+        transform: translate(15px, 15px);
+    }
+
+    header .Icon-box img:hover {
+        transition: 1.5s;
+        transform: scale(1.3);
+    }
+
+    header .Icon-box img {
+        transition: all 1.5s;
+        box-shadow: 0 0 5px white, 0px 0px 5px white, 0px 0px 10px white, 0px 0px 15px white, 0px 0px 20px white;
+    }
+
+    header .Icon-box img {
+        width: 50vw;
+        height: 50vw;
+        max-width: 120px;
+        max-height: 120px;
+        border-radius: 50%;
+        /* border: 1px solid #787978; */
+        animation: 1.5s in;
+    }
+
+    @keyframes in {
+        from {
+            opacity: 0;
+            transform: translate(0, -60px);
+        }
+
+        go {
+            opacity: 1;
+            transform: translate(0, 0px);
+        }
+    }
+
+    /* 
+    @keyframes out{
+        from{
+            opacity: 1;
+            transform: translate(0,-100px);
+        }
+        go{
+            opacity: 0;
+            transform: translate(0,100px);
+        }
+    } */
+
+    header .title_box {
+        text-align: center;
+        color: black;
+    }
+
+    header .sort_box {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 2em;
+    }
+
+    header .title_box>.my-id {
+        cursor: pointer;
+        font-size: 2em;
+        font-weight: 400;
+        padding: 0 .6em;
+        /* letter-spacing: .1em; */
+        /*   啥啥啥 表格边距 */
+        line-height: 2em;
+        margin: 2em 0;
+        display: inline-block;
+        color: white;
+        /* background: #45aaf2; */
+        filter: blur(.3px);
+        text-shadow: 1px 1px 5px #a4b0be, 2px 2px 10px #899097, 3px 3px 20px #757b81, 4px 4px 30px #585b5d, 5px 5px 40px #3f4144;
+    }
+
+    /* 
+    header .title_box>.my-id:hover {
+        text-transform: uppercase;
+    } */
+
+    header .title_box>.my-id span {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-size: 1.2em;
+        transition: 1ms;
+        transition: color 0s;
+        -webkit-animation: 1s jumpText linear;
+        animation: 1s jumpText linear;
+        display: inline-block;
+        margin: -5px;
+        color: #eee;
+        transition: all .22s;
+    }
+
+    header .title_box>.my-id span:hover {
+        /* color: #111; */
+        transition: .2s;
+        cursor: pointer;
+        transform: scale(1.3);
+        /* animation: 1.5s textChange linear; */
+    }
+
+    @keyframes textChange {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        80% {
+            transform: scale(1);
+        }
+    }
+
+    .span_click {
+        transform: scale(1.3);
+        text-transform: uppercase;
+        color: #eee !important;
+    }
+
+    @keyframes jumpText {
+        0% {
+            bottom: 0px;
+            border-bottom: 1px solid #eb3b5a;
+            color: #eb3b5a;
+        }
+
+        10% {
+            bottom: 1px;
+            border-bottom: 1px solid #fd9644;
+            color: #fd9644;
+        }
+
+        20% {
+            bottom: 2px;
+            border-bottom: 1px solid #fed330;
+            color: #fd9644;
+        }
+
+        30% {
+            bottom: 3px;
+            border-bottom: 1px solid #26de81;
+            color: #26de81;
+        }
+
+        40% {
+            bottom: 4px;
+            border-bottom: 1px solid #d1d8e0;
+        }
+
+        50% {
+            bottom: 5px;
+            border-bottom: 1px solid #4b6584;
+        }
+
+        60% {
+            bottom: 4px;
+            border-bottom: 1px solid #4b7beca6;
+        }
+
+        70% {
+            bottom: 3px;
+            border-bottom: 1px solid #a45eea6b;
+        }
+
+        80% {
+            bottom: 2px;
+            border-bottom: 1px solid #4b658486;
+        }
+
+        90% {
+            bottom: 1px;
+            border-bottom: 1px solid #0fb9b059;
+        }
+
+        100% {
+            bottom: 0px;
+            border-bottom: 1px solid #a45eea3d;
+        }
+    }
+
+    header .title_box>.my-id span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    header .title_box>.my-id span:nth-child(2) {
+        animation-delay: .1s;
+    }
+
+    header .title_box>.my-id span:nth-child(3) {
+        animation-delay: .2s;
+    }
+
+    header .title_box>.my-id span:nth-child(4) {
+        animation-delay: .3s;
+    }
+
+    header .title_box>.my-id span:nth-child(5) {
+        animation-delay: .4s;
+    }
+
+    header .title_box>.my-id span:nth-child(6) {
+        animation-delay: .5s;
+    }
+
+    header .title_box>.my-id span:nth-child(7) {
+        animation-delay: .5s;
+    }
+
+    header .title_box>.my-id span:nth-child(8) {
+        animation-delay: .6s;
+    }
+
+    header .title_box>.my-id span:nth-child(9) {
+        animation-delay: .7s;
+    }
+
+    header .title_box>.my-id span:nth-child(10) {
+        animation-delay: .8s;
+    }
+
+    header .sort_box {
+        text-align: center;
+        color: black;
+    }
+
+    header .sort_box>nav>a {
+        text-decoration: none !important;
+        display: inline-block;
+        margin: 0 1em;
+        font-size: .9em;
+        color: white;
+        text-shadow: 0 0 .5em #dfe4ea;
+        transition: all .8s;
+    }
+
+    /* .A-visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 2px solid #F36;
+        position: relative;
+    } */
+
+    header .sort_box>nav>a:hover {
+        transition: .7s;
+        color: #1e90ff;
+        transform: scale(1.3);
+        text-decoration: none !important;
+    }
+
+    header .sort_box>nav>a:active {
+        transition: .3s;
+        color: #fc5c65;
+        text-decoration: none !important;
+        text-shadow: #dfe4ea;
+    }
+
+    .tooter {
+        margin: 1em 0;
+        padding: .5em 1.5em;
+    }
+
+    .tooter>.row>.T_content {
+        border: 1px solid white;
+    }
+
+    .tooter>.row>.T_content>p {
+        line-height: 2em;
+        text-align: center;
+    }
+
+    .tooter>.row>.T_content>p>a {
+        color: #fff;
+    }
+
+    /*
+        自定义样式
+    */
+
+    .page {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, .15);
+        background-color: #fff;
+        color: #3f1c1c;
+        font-size: 14px;
+        border-radius: .9em;
+    }
+
+    .page h1 {
+        margin-left: -.9em;
+        padding-left: 1em;
+        border-left: 5px solid #ff3366;
+        text-align: left;
+        font-size: 1.5em;
+        color: #111;
+    }
+
+    .page .row .columns h2 {
+        font-size: 1em;
+    }
+
+    .page .row .columns .cell p {
+        margin: 0em;
+        text-align: left;
+        padding-left: 2em;
+        font-size: .7em;
+    }
+
+    .page .row .columns-2 .cell p {
+
+        font-weight: bold;
+        text-align: center;
+
+    }
+
+    .page .row .columns .cell p span i:nth-child(1) {
+        font-size: 1.1em;
+        margin: 0 .38em;
+    }
+
+    .page .row .columns .cell p span .fa-mobile {
+        transform: scale(1.5);
+    }
+
+    .page .row .columns .cell p span i {
+        color: #111;
+        font-size: .8em;
+        margin: .8em;
+    }
+
+    .page .row .columns .cell p .● {
+        margin-left: -1.5em;
+        padding-right: .8em;
+    }
+
+    .page .row .Section_title {
+        color: #111;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        border-left: 5px solid #F36;
+        padding: .2em 0;
+        padding-left: 1em;
+        margin: .5em 0;
+        line-height: 1.5em;
+        margin-left: -1.66em;
+    }
+
+    .page .row .Section_title>i {
+        font-size: 1.2em;
+        margin-right: .5em;
+        transform: translateY(.1em);
+    }
+
+    .page .row .wrapper_box {
+        border-radius: .5em;
+        border: 1px solid #576574;
+        background-color: #d2dae2;
+        font-size: 1.3em;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .footer .row div {
+        border-radius: .5em;
+        border: 1px solid #576574;
+        background-color: #d2dae2;
+        font-size: 1.3em;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .wrapper_box>div {
+        padding: .5em 0;
+        border: 1px solid #747474;
+        /* border-right: 5px solid #2f3542; */
+        /* box-shadow: inset 0 0 5px #2f3542; */
+    }
+
+    /*
+        媒体捕捉 然后 设置每个设备的样式     有点麻烦  
+        可以使用  .visible-phone tablet desktop 来隐藏 持有类名的元素
+        或者使用  .hidden-phone tablet desktop 来显示 持有类名的元素
+    */
+    /*大屏幕 -- 基本都是电脑  屏幕大于1200px以上*/
+
+    @media (min-width:1200px) {}
+
+    /*    平板电脑和小屏幕电脑  1200px 至 768px 之间*/
+
+    @media (min-width:768px) {}
+
+    /*    横向放置的手机和竖向放置的平板    屏幕大于1200px以上*/
+
+    @media (min-width:767px) {}
+
+    /*    横向放置的手机及分辨率更小的设备  */
+
+    @media (max-width:480px) {
+
+        /*  屏幕小于    414 X 736    */
+        header {
+            margin: 5em 0 !important;
+        }
+
+        header .Icon-box {
+            padding: 2.5em 0 0em 0;
+        }
+
+        header .Icon-box img {
+            width: 25vw;
+            height: 25vw;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 50%;
+        }
+
+        header .title_box>.my-id {
+            font-weight: 400;
+            padding: 0 1.1em;
+            letter-spacing: .1em;
+            line-height: 2em;
+            margin: 2em 0 !important;
+            box-shadow: inset 0 0 10px #fff;
+        }
+
+        header .title_box>.my-id>span {
+            font-size: .8em !important;
+            margin: -.4em !important;
+            border: none !important;
+        }
+
+        header .sort_box>.sort>a {
+            font-size: 1.1em;
+        }
+
+        .page .row .columns div p {
+            font-size: .5em !important;
+        }
+    }
+
+    #Question_textBox {
+            width: 600PX;
+            height: 200PX;
+        }
+
+
+        .page .row ul li{
+            margin: 20px 0;
+        }
+
+</style>
+
+<body>
+    <div class="foot container-fluid">
+        <header>
+            <div class="header_bg"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 Icon-box">
+                        <img src="/Images/Icon/u=3360088935,2386444351&fm=26&gp=0.jpg" alt="My ICon">
+                    </div>
+                    <div class="col-md-12 title_box">
+                        <p class="my-id">
+                            <span>S</span>
+                            <span>u</span>
+                            <span>n</span>
+                            <span>S</span>
+                            <span>h</span>
+                            <span>i</span>
+                            <span>n</span>
+                            <span>e</span>
+                        </p>
+                    </div>
+                    <div class="col-md-12 sort_box">
+                        <nav class="sort">
+                            <a href="Index.html" class="A-visited">Personal</a>
+                            <a href="Question.html">Question</a>
+                            <a href="Message.html">Message</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <main class="page">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input id="Question_textBox" type="text" placeholder="@Sunshine">
+                        <input id="Question_Send" type="button" value="submit">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            <li>
+                                <p><span>ID:老王</span>什么是自适应网页?</p>
+                            </li>
+                            <li>
+                                <p><span>ID:老李</span>为什么要做自适应网页呢?</p>
+                            </li>
+                            <li>
+                                <p><span>ID:老高</span>怎么去做自适应网页呢?</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="/Js/jquery-1.11.0.min.js"></script>
+<script src="/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="/Js/index.js"></script>
+</html5>
