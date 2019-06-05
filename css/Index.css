@@ -28,6 +28,9 @@ body {
     box-sizing: border-box;
 }
 
+.●{
+    margin: 0 10px;
+}
 
 /*添加 Operator Mono 字体*/
 
@@ -163,6 +166,7 @@ header .title_box>.my-id span:hover {
     transition: .2s;
     cursor: pointer;
     transform: scale(1.3);
+    color: #1e90ff;
     /* animation: 1.5s textChange linear; */
 }
 
@@ -371,9 +375,7 @@ header .sort_box>nav>a:active {
 
 .page .row .columns .cell p {
     margin: 0em;
-    text-align: left;
-    padding-left: 2em;
-    font-size: 1em;
+    text-align: center;
 }
 
 .page .row .columns-2 .cell p {
@@ -412,7 +414,7 @@ header .sort_box>nav>a:active {
     padding-left: 1em;
     margin: .5em 0;
     line-height: 1.5em;
-    margin-left: -1.66em;
+    margin-left: -.94em;
 }
 
 .page .row .Section_title>i {
@@ -465,43 +467,4 @@ header .sort_box>nav>a:active {
 
 @media (max-width:480px) {
 
-    /*  屏幕小于    414 X 736    */
-    header {
-        margin: 5em 0 !important;
-    }
-
-    header .Icon-box {
-        padding: 2.5em 0 0em 0;
-    }
-
-    header .Icon-box img {
-        width: 25vw;
-        height: 25vw;
-        max-width: 80px;
-        max-height: 80px;
-        border-radius: 50%;
-    }
-
-    header .title_box>.my-id {
-        font-weight: 400;
-        padding: 0 1.1em;
-        letter-spacing: .1em;
-        line-height: 2em;
-        margin: 2em 0 !important;
-        box-shadow: inset 0 0 10px #fff;
-    }
-
-    header .title_box>.my-id>span {
-        font-size: .8em !important;
-        margin: -.4em !important;
-        border: none !important;
-    }
-
-    header .sort_box>.sort>a {
-        font-size: 1.1em;
-    }
-
-    .page .row .columns div p{
-        font-size: .5em !important;
-    }
 }
