@@ -1,8 +1,7 @@
-
 *,
 body {
     padding: 0;
-    font-family: "Operator Mono","Microsoft Yahei","Arial", "Helvetica", "sans-serif";
+    font-family: "Operator Mono", "Microsoft Yahei", "Arial", "Helvetica", "sans-serif";
 }
 
 body {
@@ -17,19 +16,15 @@ body {
     /* background: url("/Images/Background/wallhaven-766413.jpg") no-repeat; */
     /* background-position: center; */
     /* height: 1800px; */
-    background: #485460;
+    background: #636e72;
     /* overflow-x: hidden  不知道是不是可行的  用来解决X轴超出 导致移动端网页有X轴的滚动条  */
     overflow-x: hidden;
 }
 
 *,
- :after,
- :before {
+:after,
+:before {
     box-sizing: border-box;
-}
-
-.●{
-    margin: 0 10px;
 }
 
 /*添加 Operator Mono 字体*/
@@ -349,15 +344,52 @@ header .sort_box>nav>a:active {
     自定义样式
 */
 
-.page {
+.page::before {
+    content: "";
+    height: 100%;
+    width: 100%;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, .15);
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
     background-color: #fff;
     color: #3f1c1c;
     font-size: 14px;
     border-radius: .9em;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    z-index: -1;
+}
+
+.page::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    background-color: #fff;
+    color: #3f1c1c;
+    font-size: 14px;
+    border-radius: .9em;
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    z-index: -1;
+}
+
+.page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    background-color: #fff;
+    color: #3f1c1c;
+    font-size: 14px;
+    border-radius: .9em;
+    position: relative;
 }
 
 .page h1 {
@@ -379,8 +411,28 @@ header .sort_box>nav>a:active {
 }
 
 .page .row .columns-2 .cell p {
+    margin: 0em;
+    text-align: left;
+}
 
-    font-weight:bold;
+.page .row .columns-3 .cell p {
+    margin: 0em;
+    text-align: left;
+}
+
+.page .row .columns-4 .cell p {
+    margin: 0em;
+    text-align: left;
+}
+
+.page .row .columns .cell p.long_text {
+    padding-left: 45px;
+    text-align: left;
+}
+
+.page .row .columns-2 .cell p {
+
+    font-weight: bold;
     text-align: center;
 
 }
@@ -401,7 +453,7 @@ header .sort_box>nav>a:active {
 }
 
 .page .row .columns .cell p .● {
-    margin-left: -1.5em;
+    margin: 0 5px;
     padding-right: .8em;
 }
 
@@ -425,27 +477,27 @@ header .sort_box>nav>a:active {
 
 .page .row .wrapper_box {
     border-radius: .5em;
-    border: 1px solid #576574;
-    background-color: #d2dae2;
+    border: 1px solid #34495e;
+    background-color: #ecf0f1;
     /* font-size: 1.3em; */
     padding: 0;
+    margin: -.1em;
     overflow: hidden;
 }
 
 .page .row .wrapper_box>div {
     padding: .5em;
-    border: 1px solid #747474;
+    border:1px #3f4144 solid;
 }
 
-.footer .row div {
-    border-radius: .5em;
-    border: 1px solid #576574;
-    background-color: #d2dae2;
-    font-size: 1.3em;
-    padding: 0;
+
+footer .row div p {
+    padding: 15px;
+    text-align: center;
     margin: 0;
-    overflow: hidden;
+
 }
+
 /*
     媒体捕捉 然后 设置每个设备的样式     有点麻烦  
     可以使用  .visible-phone tablet desktop 来隐藏 持有类名的元素
@@ -466,5 +518,25 @@ header .sort_box>nav>a:active {
 /*    横向放置的手机及分辨率更小的设备  */
 
 @media (max-width:480px) {
+
+    .container-fluid {
+        padding: 0 15px 0 15px;
+    }
+
+    .page {
+        margin: 0;
+        padding: 0 15px 0 20px;
+    }
+
+    .page .row .columns .cell p {
+        text-align: left;
+        font-size: 1.2rem;
+        padding: 0 0px 0 15px;
+    }
+
+    .page .row .columns .cell p.long_text {
+        padding-left: 0px;
+        text-align: center;
+    }
 
 }
